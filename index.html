@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /> <!-- Mengatur karakter encoding ke UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Membuat halaman responsif -->
+  <title>To-Do List</title> <!-- Judul halaman -->
+  <link rel="stylesheet" href="css/styles.css" /> <!-- Menghubungkan file CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" /><!-- link Font -->
+</head>
+<body>
+  <div class="container"> <!-- Kontainer utama untuk konten -->
+    <h1>To-Do List</h1> <!-- Judul aplikasi -->
+    <form id="todo-form"> <!-- Form untuk menambahkan tugas -->
+      <input type="text" id="task" placeholder="Enter a new task" required /> <!-- Input untuk tugas -->
+      <input type="date" id="date" required /> <!-- Input untuk tanggal -->
+      <button type="submit">Add Task</button> <!-- Tombol untuk menambahkan tugas -->
+    </form>
+
+    <div class="filter-section"> <!-- Bagian untuk filter tugas -->
+      <label for="filter">Filter Tasks:</label> <!-- Label untuk filter -->
+      <select id="filter-select"> <!-- Dropdown untuk memilih filter -->
+        <option value="all">All</option> <!-- Opsi semua tugas -->
+        <option value="completed">Completed</option> <!-- Opsi tugas selesai -->
+        <option value="pending">Pending</option> <!-- Opsi tugas pending -->
+      </select>
+    </div>
+
+    <button id="delete-all" style="background-color: #E6521F; color: white; padding: 10px; border: none; border-radius: 8px; cursor: pointer; margin-top: 10px;">Delete All</button> <!-- Tombol untuk menghapus semua tugas -->
+
+    <table id="todo-table"> <!-- Tabel untuk menampilkan daftar tugas -->
+      <thead>
+        <tr>
+          <th>TASK</th> <!-- Kolom untuk tugas -->
+          <th>DUE DATE</th> <!-- Kolom untuk tanggal jatuh tempo -->
+          <th>STATUS</th> <!-- Kolom untuk status -->
+          <th>ACTIONS</th> <!-- Kolom untuk tindakan -->
+        </tr>
+      </thead>
+      <tbody id="todo-list"></tbody> <!-- Tempat untuk menampilkan daftar tugas -->
+    </table>
+
+    <p id="no-tasks" style="display: none;">No tasks found</p> <!-- Pesan jika tidak ada tugas -->
+  </div>
+
+  <footer>
+    <p>© 2025 aditTHEcodeMan</p> <!-- Footer dengan hak cipta -->
+  </footer>
+
+  <script src="js/script.js"></script> <!-- Menghubungkan file JavaScript -->
+</body>
+</html>

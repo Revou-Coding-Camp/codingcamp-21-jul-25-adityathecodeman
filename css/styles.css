@@ -1,0 +1,187 @@
+body {
+  font-family: 'Arial', sans-serif; /* Mengatur jenis font untuk seluruh halaman */
+  background: linear-gradient(135deg, #FCEF91, #FB9E3A); /* Membuat latar belakang gradasi */
+  color: #333; /* Mengatur warna teks default */
+  margin: 0; /* Menghapus margin default */
+  padding: 0; /* Menghapus padding default */
+}
+
+.container {
+  max-width: 600px; /* Membatasi lebar kontainer */
+  margin: 50px auto; /* Memusatkan kontainer dengan margin atas dan bawah */
+  background-color: white; /* Mengatur warna latar belakang menjadi putih */
+  padding: 30px; /* Menambahkan padding di dalam kontainer */
+  border-radius: 15px; /* Membuat sudut-sudut kontainer membulat */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan untuk efek kedalaman */
+}
+
+h1 {
+  text-align: center; /* Memusatkan teks judul */
+  color: #E6521F; /* Mengatur warna teks judul */
+  margin-bottom: 20px; /* Menambahkan ruang di bawah judul */
+  font-size: 2.5em; /* Meningkatkan ukuran font */
+}
+
+form {
+  display: flex; /* Menggunakan flexbox untuk tata letak */
+  flex-direction: column; /* Menumpuk elemen secara vertikal */
+  gap: 15px; /* Menambahkan jarak antar elemen */
+}
+
+form input[type="text"],
+form input[type="date"] {
+  padding: 15px; /* Menambahkan padding di dalam field input */
+  border: 2px solid #FB9E3A; /* Mengatur border dengan warna tertentu */
+  border-radius: 8px; /* Membuat sudut-sudut input membulat */
+  font-size: 16px; /* Mengatur ukuran font di dalam input */
+  background-color: #f9f9f9; /* Mengatur warna latar belakang input */
+  transition: border-color 0.3s; /* Menambahkan efek transisi pada warna border */
+}
+
+form input[type="text"]:focus,
+form input[type="date"]:focus {
+  border-color: #E6521F; /* Mengubah warna border saat input fokus */
+  outline: none; /* Menghapus outline default saat fokus */
+}
+
+form button {
+  background-color: #E6521F; /* Mengatur warna latar belakang tombol */
+  color: white; /* Mengatur warna teks tombol */
+  padding: 15px; /* Menambahkan padding di dalam tombol */
+  font-weight: bold; /* Mengatur ketebalan teks tombol */
+  border: none; /* Menghapus border default tombol */
+  border-radius: 8px; /* Membuat sudut-sudut tombol membulat */
+  cursor: pointer; /* Mengubah kursor saat melayang di atas tombol */
+  transition: background 0.3s, transform 0.2s; /* Menambahkan efek transisi pada tombol */
+}
+
+form button:hover {
+  background-color: #EA2F14; /* Mengubah warna latar belakang saat tombol dihover */
+  transform: scale(1.05); /* Meningkatkan ukuran tombol saat dihover */
+}
+
+.filter-section {
+  margin-top: 20px; /* Menambahkan margin di atas bagian filter */
+  display: flex; /* Menggunakan flexbox untuk tata letak */
+  justify-content: space-between; /* Menyebar elemen secara merata */
+  align-items: center; /* Memusatkan elemen secara vertikal */
+}
+
+.filter-section label {
+  margin-right: 10px; /* Menambahkan ruang di sebelah kanan label */
+  font-weight: bold; /* Mengatur ketebalan teks label */
+}
+
+.filter-section select {
+  padding: 10px; /* Menambahkan padding di dalam dropdown */
+  border-radius: 6px; /* Membuat sudut-sudut dropdown membulat */
+  border: 2px solid #FB9E3A; /* Mengatur border dengan warna tertentu */
+  background-color: white; /* Mengatur warna latar belakang dropdown */
+  cursor: pointer; /* Mengubah kursor saat melayang di atas dropdown */
+}
+
+table {
+  width: 100%; /* Mengatur lebar tabel menjadi 100% */
+  margin-top: 20px; /* Menambahkan margin di atas tabel */
+  border-collapse: collapse; /* Menghapus jarak antar border tabel */
+}
+
+th, td {
+  padding: 12px; /* Menambahkan padding di dalam sel tabel */
+  text-align: left; /* Mengatur posisi teks ke kiri */
+  border-bottom: 1px solid #ddd; /* Menambahkan garis bawah pada sel tabel */
+}
+
+tr:hover {
+  background-color: #FCEF91; /* Mengubah warna latar belakang saat mouse melayang di atas baris */
+}
+
+.todo-actions button {
+  background: none; /* Menghapus latar belakang tombol aksi */
+  border: none; /* Menghapus border tombol aksi */
+  cursor: pointer; /* Mengubah kursor saat melayang di atas tombol aksi */
+  font-size: 18px; /* Mengatur ukuran font tombol aksi */
+  color: #E6521F; /* Mengatur warna teks tombol aksi */
+  transition: color 0.3s; /* Menambahkan efek transisi pada warna teks */
+}
+
+.todo-actions button:hover {
+  color: #EA2F14; /* Mengubah warna teks saat tombol aksi dihover */
+}
+
+#no-tasks {
+  text-align: center; /* Memusatkan teks */
+  color: #EA2F14; /* Mengatur warna teks untuk pesan tidak ada tugas */
+  margin-top: 20px; /* Menambahkan ruang di atas pesan */
+  font-weight: bold; /* Mengatur ketebalan teks */
+}
+
+footer {
+  text-align: center; /* Memusatkan teks footer */
+  margin-top: 30px; /* Menambahkan margin di atas footer */
+  color: #E6521F; /* Mengatur warna teks footer */
+  font-weight: bold; /* Mengatur ketebalan teks footer */
+}
+
+#delete-all {
+  transition: background 0.3s; /* Menambahkan efek transisi pada tombol hapus semua */
+}
+
+#delete-all:hover {
+  background-color: #EA2F14; /* Mengubah warna latar belakang saat tombol dihover */
+}
+
+/* Gaya tombol aksi untuk tugas */
+.todo-actions button {
+  background: none; /* Menghapus latar belakang tombol aksi */
+  border: none; /* Menghapus border tombol aksi */
+  cursor: pointer; /* Mengubah kursor saat melayang di atas tombol aksi */
+  font-size: 18px; /* Mengatur ukuran font tombol aksi */
+  color: #E6521F; /* Mengatur warna teks tombol aksi */
+  transition: color 0.3s, transform 0.3s; /* Menambahkan efek transisi pada warna dan ukuran */
+}
+
+.todo-actions button:hover {
+  color: #EA2F14; /* Mengubah warna teks saat tombol aksi dihover */
+  transform: scale(1.1); /* Meningkatkan ukuran tombol saat dihover */
+}
+
+/* Gaya untuk notifikasi */
+.notification {
+  display: none; /* Mengatur notifikasi agar tidak terlihat secara default */
+  background-color: #E6521F; /* Mengatur warna latar belakang notifikasi */
+  color: white; /* Mengatur warna teks notifikasi */
+  padding: 10px; /* Menambahkan padding di dalam notifikasi */
+  border-radius: 5px; /* Membuat sudut-sudut notifikasi membulat */
+  margin-top: 10px; /* Menambahkan margin di atas notifikasi */
+  text-align: center; /* Memusatkan teks dalam notifikasi */
+  position: absolute; /* Mengatur posisi notifikasi */
+  top: 20px; /* Mengatur posisi notifikasi dari atas */
+  left: 50%; /* Memusatkan notifikasi secara horizontal */
+  transform: translateX(-50%); /* Memindahkan notifikasi ke tengah */
+  transition: opacity 0.5s; /* Menambahkan efek transisi pada opasitas notifikasi */
+}
+
+.completed {
+  color: #4CAF50; /* Warna hijau untuk tugas yang sudah selesai */
+}
+
+.pending {
+  color: #E6521F; /* Warna merah-oranye untuk tugas yang pending */
+}
+body {
+  font-family: 'Montserrat', sans-serif; /* Mengatur font menjadi Montserrat */
+  background: linear-gradient(135deg, #FCEF91, #FB9E3A);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif; /* Mengatur font judul menjadi Montserrat */
+  text-align: center;
+  color: #E6521F;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+}
+
